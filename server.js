@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res, next) => {
+app.get('/*', (req, res, next) => {
     res.sendFile(path.join(__dirname,'index.html'));
 });
 
@@ -21,7 +21,7 @@ app.use((err, req, res, next) => {
 
 async function startServer() {
     try {
-        await db.sync();
+        await db.sync({ force: true });
         console.log('The database is synced!');
         app.listen(PORT, () => 
         console.log (

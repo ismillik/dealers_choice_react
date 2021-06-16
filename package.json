@@ -8,7 +8,8 @@
     "start": "node server.js",
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
-    "start:dev": "npm run build:dev & nodemon server --ignore dist/ --ignore src/"
+    "start:dev": "npm run build:dev & nodemon server --ignore dist/ --ignore src/",
+    "seed": "node seed.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "pg": "^8.6.0",
     "sequelize": "^6.6.2"
