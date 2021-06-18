@@ -1,10 +1,15 @@
-const { STRING, ENUM, INTEGER } = require('sequelize');
+const { STRING, ENUM, INTEGER, UUID, UUIDV4 } = require('sequelize');
 const Sequelize = require('sequelize');
 const db = new Sequelize('postgres://localhost/dealers_choice_react', {
     logging: false,
 });
 
 const Team = db.define('team', {
+    id: {
+        type: UUID,
+        defaultValue: UUIDV4,
+        primaryKey: true
+    },
     name: {
         type: STRING,
         allowNull: false,

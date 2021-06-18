@@ -21,8 +21,6 @@ app.use((err, req, res, next) => {
 
 async function startServer() {
     try {
-        await db.sync({ force: true });
-        console.log('The database is synced!');
         app.listen(PORT, () => 
         console.log (
             `Listening on port ${PORT}
