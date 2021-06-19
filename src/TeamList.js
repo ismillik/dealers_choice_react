@@ -19,9 +19,10 @@ const TeamList = (props) => {
             <td>{team.name}</td>
             <td><img src={team.flagUrl}/></td>
             <td>{team.group}</td>
-            <td>{team.wins}</td>
+            <td>{team.wins} <button onClick= {() => increaseWins(team.id)}>+</button><button>-</button></td>
             <td>{team.draws}</td>
             <td>{team.losses}</td>
+
         </tr>
         ))}
       </tbody>

@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  
+  #app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    margin-left: 10px;
+  }
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #222222;
+  }
+  
+  th,
+  td {
+    padding: 5px;
+  }
+  
+  tr:hover {
+    background-color: #f2f2f2;
+  }
