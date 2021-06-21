@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TeamList = (props) => {
-  const { teams } = props;
+  const { teams, increaseWins } = props;
 
   return (
     <table>

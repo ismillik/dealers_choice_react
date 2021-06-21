@@ -26,11 +26,13 @@ class Main extends React.Component {
    async increaseWins (teamId) {
         try {
             await axios.put(`/api/teams/${teamId}`, {
-                wins: team.wins ++
-            })
+                wins: team.wins ++,
+            });
+            this.setState({teams})
         }
         catch (err) {
-            console.log('There was a problem making contact!')
+            console.log('There was a problem making contact!');
+            console.log(err);
         }
     }
     
@@ -38,7 +40,10 @@ class Main extends React.Component {
         return (
             <div id='main'>
                 <h1>Euros 2020</h1>
-                <TeamList teams = { this.state.teams }/>
+                <TeamList 
+                    teams = { this.state.teams }
+                    increaseWins = { this.increaseWins }
+                />
             </div>
    )}
 
